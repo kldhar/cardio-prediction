@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <br><br>
+  <title>Cardiovascular</title>
+  <link rel="stylesheet" href="static/styles/style.css">
+  
+</head>
+
+<body>
+ <body bgcolor="honeydew">
+ <div class="heading">
+  <div class="flex items-center justify-between w-full md:w-auto">
+
+        <a href="#">
+                <img class="h-8 w-auto sm:h-10" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fequityinmentalhealth.org%2Fwp-content%2Fuploads%2F2020%2F08%2FUniversity-of-Michigan-Dearborn.png&f=1&nofb=1&ipt=9ffcca80ca3d7c5c1c99d103efba81e7553d1eb8168525dfac8bc8f16393a637&ipo=images" width="300" height="150">
+              </a>
+		</div>
+  <h1 style="color:DodgerBlue;" align="center"><Strong> Cloud Computing Using Google Cloud Platform</Strong></h1>
+  </div>
+              </div>
+  <h1 style="color:Crimson;" align="center">Cardiovascular Disease Prediction</h1>
+  </div>
+  
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form align="center" action="{{ url_for('predict')}}"method="post">
+    
+            
+       <label for="Age"> Age:</label>
+       <input  name="Age" required="required" />
+       <br><br>
+       <label for="Gender">Gender     :</label>
+       <input  name="Gender"  required="required" />
+       <br><br>
+	<label for="Heighte">Height   :</label>
+       <input  name="Height"  required="required" />
+       <br><br>
+	<label for="Weight">Weight    :</label>
+       <input  name="Weight"  required="required">
+       <br><br>
+	<label for="Blood Pressure High">BP High :</label>
+       <input  step=any name="Blood Pressure High"  required="required" />
+      <br><br>
+	<label for="Blood Pressure Low">BP Low:</label>
+      <input   step=any name="Blood Pressure Low"  required="required" />
+      <br><br>
+	<label for="Cholesterol">Cholesterol    :</label>
+      <input    step=any  name="Cholesterol"  required="required"/>
+      <br><br>
+	<label for="Glucose">Glucose     :</label>
+      <input  name="Glucose"  required="required"/>
+      <br><br>
+	<label for="Smoke">Smoke    :</label>
+      <input  name="Smoke"  required="required" />
+      <br><br>
+	<label for="Alcohol">Alcohol    :</label>
+      <input  name="Alcohol"  required="required" />
+      <br><br>
+	<label for="Physical Activity">Physical Activity   :</label>
+      <input  name="Physical Activity"  required="required" />
+      <br><br>
+      <br><br><br>
+
+   
+    
+        <button class="button">Predict</button>
+      </form>
+
+   <br>
+   <br>
+   <br>
+   <h2 style="color:Tomato;" align="center">{{ prediction_text }}</h2>
+   
+   <link rel="stylesheet" href="static/styles/style.css">
+ 
+
+
+</body>
+</html>
